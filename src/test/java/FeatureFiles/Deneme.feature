@@ -4,3 +4,4 @@ Feature: Testing
     Given Navigate to basqar
     When steps success
     And give the login to
+    Then page success
