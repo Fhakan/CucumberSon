@@ -7,3 +7,4 @@ Feature: Testing
     Then page success
     And scenario give to request
     And scenario step to login
+    Then has not been selected
