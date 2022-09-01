@@ -1,1 +1,0 @@
-                       Feature: Senaryo Deneme
