@@ -6,3 +6,4 @@ Feature: Testing
     And give the login to
     Then page success
     And scenario give to request
+    And scenario step to login
