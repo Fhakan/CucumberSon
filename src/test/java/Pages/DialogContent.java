@@ -11,11 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class DialogContent extends Parent{
-
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-
     @FindBy(id="mat-input-0")
     private WebElement username;
 
@@ -73,6 +71,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editButton;
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -87,10 +88,8 @@ public class DialogContent extends Parent{
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
         }
-
         sendKeysFunction(myElement, value);
     }
-
     public void findAndClick(String strElement){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
         switch (strElement)
@@ -103,25 +102,19 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
-
+            case "editButton" : myElement =editButton; break;
         }
-
         clickFunction(myElement);
     }
-
-    public void findAndContainsText(String strElement, String text){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndContainsText(String strElement, String text){
         switch (strElement)
         {
             case "dashboard" : myElement =dashboard; break;
             case "successMessage" : myElement =successMessage; break;
             case "alreadyExist" : myElement =alreadyExist; break;
         }
-
         verifyContainsText(myElement,text);
     }
-
-
     public void SearchAndDelete(String searchText){
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
