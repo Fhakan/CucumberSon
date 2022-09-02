@@ -5,7 +5,7 @@ Feature: Human Resources
     Then User should login successfuly
 
     @CCP-21
-    Scenario: Create Human Resources and Delete
+    Scenario: Create Human Resources, edit and Delete
       And Click on the element in the left Nav
         | humanResources   |
         | setupThree |
