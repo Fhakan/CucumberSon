@@ -74,6 +74,24 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    private WebElement orderInput;
+
+    @FindBy(xpath = "//span[text()='Next Grade']")
+    private WebElement nextGrade;
+
+    @FindBy(xpath = "//mat-option[contains(@id,'mat-option')][3]/span")
+    private WebElement nextGradeOptions;
+
+    @FindBy(xpath = "//td[text()=' Cloudy ']/../td[7]/div/ms-edit-button/button")
+    private WebElement editButtonOption;
+
+    @FindBy(xpath = "//td[text()=' Cloudy ']/../td[7]/div//ms-delete-button//button")
+    private WebElement deleteButtonOption;
+
+    @FindBy(xpath = "//div[text()='Grade Level successfully deleted']")
+    private WebElement successDeleted;
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -87,6 +105,7 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "orderInput" : myElement =orderInput; break;
         }
         sendKeysFunction(myElement, value);
     }
@@ -103,6 +122,10 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "editButton" : myElement =editButton; break;
+            case "nextGrade" : myElement =nextGrade; break;
+            case "nextGradeOptions" : myElement =nextGradeOptions; break;
+            case "editButtonOption" : myElement =editButtonOption; break;
+            case "deleteButtonOption" : myElement =deleteButtonOption; break;
         }
         clickFunction(myElement);
     }
@@ -112,6 +135,7 @@ public class DialogContent extends Parent{
             case "dashboard" : myElement =dashboard; break;
             case "successMessage" : myElement =successMessage; break;
             case "alreadyExist" : myElement =alreadyExist; break;
+            case "successDeleted" : myElement =successDeleted; break;
         }
         verifyContainsText(myElement,text);
     }
