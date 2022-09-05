@@ -33,7 +33,6 @@ public class HumanSteps {
     @And("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
         dc.findAndContainsText("successMessage","success");
-
     }
     @And("User delete item from Dialog")
     public void userDeleteItemFromDialog(DataTable elements) {
@@ -41,5 +40,9 @@ public class HumanSteps {
         for(int i=0;i<listElement.size();i++) {
             dc.SearchAndDelete(listElement.get(i));
         }
+    }
+    @And("Success message should displayed")
+    public void successMessageShouldDisplayed() {
+        dc.findAndContainsText("successDeleted","Grade Level successfully deleted");
     }
 }

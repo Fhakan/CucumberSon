@@ -9,13 +9,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 @CucumberOptions(
-        tags = "@CCP-21",
-        features = {"src/test/java/FeatureFiles/CCP-21.feature"},
+        tags = "@CCP-30",
+        features = {"src/test/java/FeatureFiles/CCP-30.feature"},
         glue = {"StepDefinitions"},
         plugin = { "html:target//cucumber-reports.html" }
 )
-public class CCP_21Report extends AbstractTestNGCucumberTests {
-
+public class CCP_30Report extends AbstractTestNGCucumberTests {
     @BeforeClass(alwaysRun = true)
     @Parameters("browser")
     public void beforeClass(String browser)
@@ -25,7 +24,7 @@ public class CCP_21Report extends AbstractTestNGCucumberTests {
     @AfterClass
     public static void writeExtentReport() {
         ExtentService.getInstance().setSystemInfo("User Name", "Group 22");
-        ExtentService.getInstance().setSystemInfo("Application Name", "Campus Human Resources");
+        ExtentService.getInstance().setSystemInfo("Application Name", "Campus Grade Level");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name").toString());
         ExtentService.getInstance().setSystemInfo("Department", "QA");
     }
