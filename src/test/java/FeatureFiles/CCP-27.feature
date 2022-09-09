@@ -1,25 +1,31 @@
-Feature: Attestations Menu
+Feature: Locations
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
 
-    @CCP-22
-    Scenario: Add, Edit, Delete from Attestations
+    @CCP-27
+    Scenario: Add, Edit and Delete School Locations
       And Click on the element in the left Nav
-        | humanResources |
-        | setupThree     |
-        | attestations   |
+        | setupOne    |
+        | schoolSetup |
+        | locations   |
 
       And Click on the element in the Dialog
         | addButton |
 
       And User sending the keys in Dialog content
-        | nameInput  | Met13 |
+        | nameInput  | Ataturk |
+        | shortName  | ATA     |
+        | capacity   | 1938    |
 
       And Click on the element in the Dialog
-        | saveButton |
+        | locType  |
+
+      And Click on the element in the Dialog
+        | activeButton |
+        | saveButton   |
 
       And Success message should be displayed
 
@@ -27,10 +33,16 @@ Feature: Attestations Menu
         | editButton |
 
       And User sending the keys in Dialog content
-        | nameInput | Meted4 |
+        | nameInput  | M.Kemal |
+        | shortName  | MKA     |
+        | capacity   | 1881    |
 
       And Click on the element in the Dialog
-        | saveButton |
+        | locType  |
+
+      And Click on the element in the Dialog
+        | activeButton |
+        | saveButton   |
 
       And Success message should be displayed
 
@@ -39,3 +51,4 @@ Feature: Attestations Menu
         | deleteDialogBtn |
 
       And Success message should be displayed
+

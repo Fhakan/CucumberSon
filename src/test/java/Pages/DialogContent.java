@@ -2,6 +2,7 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class DialogContent extends Parent{
+
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -92,6 +94,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[text()='Grade Level successfully deleted']")
     private WebElement successDeleted;
 
+    @FindBy (xpath = "//ms-integer-field[@formcontrolname='capacity']/input")
+    private WebElement capacity;
+
+    @FindBy (xpath = "//mat-slide-toggle[@formcontrolname='active']//span[1]/span[1]/span")
+    private WebElement activeButton;
+
+    @FindBy (xpath = "//mat-select[@formcontrolname='type']//div/div/span[1]/span")
+    private WebElement locType;
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -106,6 +119,8 @@ public class DialogContent extends Parent{
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
             case "orderInput" : myElement =orderInput; break;
+            case "capacity" : myElement = capacity; break;
+            case "locType" : myElement = locType; break;
         }
         sendKeysFunction(myElement, value);
     }
@@ -126,7 +141,9 @@ public class DialogContent extends Parent{
             case "nextGradeOptions" : myElement =nextGradeOptions; break;
             case "editButtonOption" : myElement =editButtonOption; break;
             case "deleteButtonOption" : myElement =deleteButtonOption; break;
+            case "activeButton" : myElement = activeButton; break;
         }
+
         clickFunction(myElement);
     }
     public void findAndContainsText(String strElement, String text){
@@ -148,17 +165,6 @@ public class DialogContent extends Parent{
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
