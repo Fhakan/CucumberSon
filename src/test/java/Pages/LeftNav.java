@@ -50,6 +50,9 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Grade Levels']")
     private WebElement gradeLevel;
 
+    @FindBy (xpath = "//span[text()='Attestations']")
+    private WebElement attestations;
+
     WebElement myElement;
     public void findAndClick(String strElement){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -68,6 +71,7 @@ public class LeftNav extends Parent{
             case "setupThree" : myElement =setupThree; break;
             case "position" : myElement =position; break;
             case "gradeLevel" : myElement =gradeLevel; break;
+            case "attestations" : myElement = attestations; break;
         }
 
         clickFunction(myElement);
