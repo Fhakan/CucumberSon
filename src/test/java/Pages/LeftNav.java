@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent {
+public class LeftNav extends Parent{
 
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -22,17 +22,17 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     private WebElement clickindepartments;
 
-//    @FindBy(xpath = "//*[@class='mat-select-arrow-wrapper ng-tns-c93-59']")
-//    private WebElement selectschoolandclick;
+    @FindBy(xpath = "//*[@class='mat-select-arrow-wrapper ng-tns-c93-59']")
+    private WebElement selectschoolandclick;
 
-//    @FindBy(xpath = "//*[@id='mat-option-24']")
-//    private WebElement clickschool1;
+    @FindBy(xpath = "//*[@id='mat-option-24']")
+  private WebElement clickschool1;
 
-//    @FindBy(xpath = "//*[@class='control-full']")
-//    private WebElement searchclick;
+  @FindBy(xpath = "//*[@class='control-full']")
+    private WebElement searchclick;
 
-//    @FindBy(xpath = "//*[@class='svg-inline--fa fa-plus']")
-//    private WebElement add1;
+   @FindBy(xpath = "//*[@class='svg-inline--fa fa-plus']")
+    private WebElement add1;
 
     //*********************************************************************************//
 
@@ -58,41 +58,41 @@ public class LeftNav extends Parent {
 
 
 
-//
-//    @FindBy(xpath = "//div[@class='control-full']")
-//    private WebElement searchclick;
-//
-//    @FindBy(css = "div>ms-add-button")
-//            private WebElement add1;
+
+    @FindBy(xpath = "//div[@class='control-full']")
+    private WebElement searchclick;
+
+    @FindBy(css = "div>ms-add-button")
+            private WebElement add1;
 
 
-//
-//    @FindBy(xpath="(//span[text()='Setup'])[1]")
-//    private WebElement setupOne;
-//
-//    @FindBy(xpath = "//span[text()='Parameters']")
-//    private WebElement parameters;
-//
-//    @FindBy(xpath = "//span[text()='Countries']")
-//    private WebElement countries;
-//
-//    @FindBy(xpath = "//span[text()='Citizenships']")
-//    private WebElement citizenShip;
-//
-//    @FindBy(xpath = "//span[text()='Nationalities']")
-//    private WebElement nationalities;
-//
-//    @FindBy(xpath = "//span[text()='Fees']")
-//    private WebElement fees;
-//
-//    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
-//    private WebElement entranceExamsOne;
-//
-//    @FindBy(xpath = "(//span[text()='Setup'])[2]")
-//    private WebElement setupTwo;
-//
-//    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
-//    private WebElement entranceExamsTwo;
+
+    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    private WebElement setupOne;
+
+    @FindBy(xpath = "//span[text()='Parameters']")
+    private WebElement parameters;
+
+    @FindBy(xpath = "//span[text()='Countries']")
+    private WebElement countries;
+
+    @FindBy(xpath = "//span[text()='Citizenships']")
+    private WebElement citizenShip;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    private WebElement nationalities;
+
+    @FindBy(xpath = "//span[text()='Fees']")
+    private WebElement fees;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
+    private WebElement entranceExamsOne;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[2]")
+    private WebElement setupTwo;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
+    private WebElement entranceExamsTwo;
 
     WebElement myElement;
 
@@ -109,21 +109,21 @@ public class LeftNav extends Parent {
                 myElement = clickindepartments;
                 break;
 
-//            case "selectschoolandclick":
-//                myElement = selectschoolandclick;
-//                break;
-//
-//            case "clickschool1":
-//                myElement = clickschool1;
-//                break;
-//
-//            case "searchclick":
-//                myElement = searchclick;
-//                break;
-//
-//            case "add1":
-//                myElement = add1;
-//                break;
+           case "selectschoolandclick":
+               myElement = selectschoolandclick;
+               break;
+
+           case "clickschool1":
+               myElement = clickschool1;
+               break;
+
+           case "searchclick":
+               myElement = searchclick;
+               break;
+
+           case "add1":
+               myElement = add1;
+               break;
 
             //************************************************************//
 
@@ -144,21 +144,21 @@ public class LeftNav extends Parent {
             case "clickinpossitioncatagory":myElement=clickinpossitioncatagory;break;
 
 
-//            case "searchclick":myElement=searchclick;break;
-//            case "add1":
-//                myElement = add1;
-//                break;
+          case "searchclick":myElement=searchclick;break;
+          case "add1":
+              myElement = add1;
+              break;
 
 
-//            case "setupOne" : myElement =setupOne; break;
-//            case "parameters" : myElement =parameters; break;
-//            case "countries" : myElement =countries; break;
-//            case "citizenShip" : myElement =citizenShip; break;
-//            case "nationalities" : myElement =nationalities; break;
-//            case "fees" : myElement =fees; break;
-//            case "entranceExamsOne" : myElement =entranceExamsOne; break;
-//            case "setupTwo" : myElement =setupTwo; break;
-//            case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
+          case "setupOne" : myElement =setupOne; break;
+          case "parameters" : myElement =parameters; break;
+          case "countries" : myElement =countries; break;
+          case "citizenShip" : myElement =citizenShip; break;
+          case "nationalities" : myElement =nationalities; break;
+          case "fees" : myElement =fees; break;
+          case "entranceExamsOne" : myElement =entranceExamsOne; break;
+          case "setupTwo" : myElement =setupTwo; break;
+          case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
         }
 
         clickFunction(myElement);
