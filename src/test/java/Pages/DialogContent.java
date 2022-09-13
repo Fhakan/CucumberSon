@@ -38,6 +38,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-save-button//button")
     private WebElement saveButton;
 
+
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
@@ -122,6 +123,9 @@ public class DialogContent extends Parent{
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
             case "orderInput" : myElement =orderInput; break;
+
+            //
+
         }
         sendKeysFunction(myElement, value);
     }
@@ -164,6 +168,8 @@ public class DialogContent extends Parent{
         findAndClick("searchButton"); // arama butonuna bas
 
         waitUntilLoading();
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOf(successDeleted));
 
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas

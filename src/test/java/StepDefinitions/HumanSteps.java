@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 
@@ -21,6 +22,7 @@ public class HumanSteps {
     public void clickOnTheElementInTheDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for(int i=0;i<listElement.size();i++) {
+            GWD.Bekle(2);
             dc.findAndClick(listElement.get(i));
         }
     }
@@ -39,7 +41,9 @@ public class HumanSteps {
         List<String> listElement = elements.asList(String.class);
         for(int i=0;i<listElement.size();i++) {
             dc.SearchAndDelete(listElement.get(i));
+
         }
+        GWD.Bekle(3);
     }
     @And("Success message should displayed")
     public void successMessageShouldDisplayed() {
