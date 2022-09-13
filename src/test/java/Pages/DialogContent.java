@@ -92,6 +92,22 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[text()='Grade Level successfully deleted']")
     private WebElement successDeleted;
 
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-floppy-disk']")
+    private WebElement saveButton2;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-pen-to-square']")
+    private WebElement editButton2;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-trash-can']")
+    private WebElement deleteButton2;
+
+    @FindBy(xpath = "//*[@type='submit']")
+    private WebElement deleteButton3;
+
+
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -126,6 +142,10 @@ public class DialogContent extends Parent{
             case "nextGradeOptions" : myElement =nextGradeOptions; break;
             case "editButtonOption" : myElement =editButtonOption; break;
             case "deleteButtonOption" : myElement =deleteButtonOption; break;
+            case "saveButton2" : myElement =saveButton2; break;
+            case "editButton2" : myElement =editButton2; break;
+            case "deleteButton2" : myElement =deleteButton2; break;
+            case "deleteButton3" : myElement =deleteButton3; break;
         }
         clickFunction(myElement);
     }
