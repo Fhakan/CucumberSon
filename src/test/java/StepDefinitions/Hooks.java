@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import Pages.DialogContent;
 import Utilities.GWD;
 import com.aventstack.extentreports.service.ExtentTestManager;
 import io.cucumber.java.After;
