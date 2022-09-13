@@ -16,7 +16,7 @@ Feature: Attestations Menu
         | addButton |
 
       And User sending the keys in Dialog content
-        | nameInput  | Met13 |
+        | nameInput  | Met14 |
 
       And Click on the element in the Dialog
         | saveButton |
