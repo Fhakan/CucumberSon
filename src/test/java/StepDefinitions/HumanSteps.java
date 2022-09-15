@@ -5,6 +5,8 @@ import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 public class HumanSteps {
@@ -44,5 +46,18 @@ public class HumanSteps {
     @And("Success message should displayed")
     public void successMessageShouldDisplayed() {
         dc.findAndContainsText("successDeleted","Grade Level successfully deleted");
+    }
+    @And("User choose the stage option")
+    public void userChooseTheStageOption(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for(int i=0;i<listElement.size();i++) {
+            dc.findAndClick(listElement.get(i));
+        }
+    }
+    @And("Robot press esc")
+    public void robotPressEsc() throws AWTException {
+        Robot rbt= new Robot();
+        rbt.keyPress(KeyEvent.VK_ESCAPE);
+        rbt.keyRelease(KeyEvent.VK_ESCAPE);
     }
 }
