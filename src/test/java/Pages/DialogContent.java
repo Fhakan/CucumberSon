@@ -31,6 +31,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
 
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'BUTTON.ADD')]//button")
+    private WebElement addButton2;
+
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     private WebElement nameInput;
 
@@ -136,6 +139,7 @@ public class DialogContent extends Parent{
         {
             case "loginButton" : myElement =loginButton; break;
             case "addButton" : myElement =addButton; break;
+            case "addButton2" : myElement =addButton2; break;
             case "saveButton" : myElement =saveButton; break;
             case "closeDialog" : myElement =closeDialog; break;
             case "searchButton" : myElement =searchButton; break;
