@@ -13,31 +13,31 @@ Feature: Fields
       | fields     |
 
     And Click on the element in the Dialog
-      | fieldsAddButton |
+      | addButton2 |
 
     And User sending the keys in Dialog content
       | nameInput  | Ertccp2 |
       | codeInput  | Ertcc  |
 
     And Click on the element in the Dialog
-      | saveButton2 |
+      | saveButton |
 
     And Success message should be displayed
 
     And Click on the element in the Dialog
-      | editButton2 |
+      | editButton |
 
     And User sending the keys in Dialog content
       | nameInput | Ertccp24 |
       | codeInput | Ertccp  |
 
     And Click on the element in the Dialog
-      | saveButton2 |
+      | saveButton |
 
     And Success message should be displayed
 
     And Click on the element in the Dialog
-      | deleteButton2 |
+      | deleteButton |
       | deleteDialogBtn |
 
     And Success message should be displayed
