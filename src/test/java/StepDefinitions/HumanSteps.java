@@ -7,7 +7,6 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 
 import java.util.List;
-
 public class HumanSteps {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
