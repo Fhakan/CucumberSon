@@ -110,8 +110,7 @@ public class DialogContent extends Parent{
 
 
     WebElement myElement;
-    public void findAndSend(String strElement, String value){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndSend(String strElement, String value){  
         switch (strElement)
         {
             case "username" : myElement =username; break;
@@ -129,8 +128,7 @@ public class DialogContent extends Parent{
         }
         sendKeysFunction(myElement, value);
     }
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){  
         switch (strElement)
         {
             case "loginButton" : myElement =loginButton; break;
@@ -164,15 +162,14 @@ public class DialogContent extends Parent{
         verifyContainsText(myElement,text);
     }
     public void SearchAndDelete(String searchText){
-        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
-
+        findAndSend("searchInput", searchText); 
+        findAndClick("searchButton"); 
         waitUntilLoading();
         WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(successDeleted));
 
-        findAndClick("deleteButton");// silme butonua bas
-        findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
+        findAndClick("deleteButton");
+        findAndClick("deleteDialogBtn");
     }
 
 
