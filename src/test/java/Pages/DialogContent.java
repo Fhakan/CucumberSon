@@ -61,6 +61,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;
 
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-pen-to-square']")
+    private WebElement editButton2;
+
     @FindBy(xpath = "//ms-delete-button//button")
     private WebElement deleteButton;
 
@@ -143,6 +146,7 @@ public class DialogContent extends Parent{
             case "saveButton" : myElement =saveButton; break;
             case "closeDialog" : myElement =closeDialog; break;
             case "searchButton" : myElement =searchButton; break;
+            case "editButton2":myElement=editButton2;break;
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
