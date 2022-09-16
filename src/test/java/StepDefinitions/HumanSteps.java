@@ -41,7 +41,6 @@ public class HumanSteps {
         List<String> listElement = elements.asList(String.class);
         for(int i=0;i<listElement.size();i++) {
             dc.SearchAndDelete(listElement.get(i));
-
         }
         GWD.Bekle(3);
     }
