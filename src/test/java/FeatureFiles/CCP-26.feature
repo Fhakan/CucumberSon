@@ -54,6 +54,5 @@ Feature: Datatable Functionality
       | deleteButton    |
       | deleteDialogBtn |
 
-    And User delete item from Dialog
 
-    And Success message should displayed
+    And Success message should be displayed

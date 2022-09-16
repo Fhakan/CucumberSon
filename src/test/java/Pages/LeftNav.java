@@ -81,9 +81,9 @@ public class LeftNav extends Parent{
             case "position" : myElement =position; break;
             case "gradeLevel" : myElement =gradeLevel; break;
             case "attestations" : myElement =attestations; break;
-//
+
             case "Education" : myElement =Education; break;
-            //
+
             case "SubjectCatagories":myElement=SubjectCatagories;break;
 
         }

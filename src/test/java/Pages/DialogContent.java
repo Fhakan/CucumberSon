@@ -124,7 +124,7 @@ public class DialogContent extends Parent{
             case "priorityCode" : myElement =priorityCode; break;
             case "orderInput" : myElement =orderInput; break;
 
-            //
+
 
         }
         sendKeysFunction(myElement, value);
