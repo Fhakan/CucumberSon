@@ -109,11 +109,14 @@ public class DialogContent extends Parent{
     @FindBy (xpath = "//mat-select[@formcontrolname='type']//div/div/span[1]/span")
     private WebElement locType;
 
-    @FindBy(xpath = "(//div[contains(@class,'mat-select')])[10]")
+    @FindBy(xpath = "(//div[contains(@class,'mat-select-')])[3]")
     private WebElement stage;
 
     @FindBy(xpath = "//span[text()=' Certificate ']")
     private WebElement certificate;
+
+    @FindBy(xpath = "(//span[text()=' New Auckland School '])")
+    private WebElement newauch;
 
 
 
@@ -158,6 +161,8 @@ public class DialogContent extends Parent{
             case "activeButton" : myElement = activeButton; break;
             case "stage" : myElement =stage;break;
             case "certificate" : myElement = certificate;break;
+            case "newauch":myElement=newauch;break;
+
         }
 
         clickFunction(myElement);
