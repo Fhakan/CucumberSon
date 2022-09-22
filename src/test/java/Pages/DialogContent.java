@@ -2,6 +2,7 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class DialogContent extends Parent{
+
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -28,6 +30,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'BUTTON.ADD')]//button")
+    private WebElement addButton2;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     private WebElement nameInput;
@@ -55,6 +60,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//ms-search-button//button")
     private WebElement searchButton;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-pen-to-square']")
+    private WebElement editButton2;
 
     @FindBy(xpath = "//ms-delete-button//button")
     private WebElement deleteButton;
@@ -92,6 +100,26 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[text()='Grade Level successfully deleted']")
     private WebElement successDeleted;
 
+    @FindBy (xpath = "//ms-integer-field[@formcontrolname='capacity']/input")
+    private WebElement capacity;
+
+    @FindBy (xpath = "//mat-slide-toggle[@formcontrolname='active']//span[1]/span[1]/span")
+    private WebElement activeButton;
+
+    @FindBy (xpath = "//mat-select[@formcontrolname='type']//div/div/span[1]/span")
+    private WebElement locType;
+
+    @FindBy(xpath = "(//div[contains(@class,'mat-select-')])[3]")
+    private WebElement stage;
+
+    @FindBy(xpath = "//span[text()=' Certificate ']")
+    private WebElement certificate;
+
+    @FindBy(xpath = "(//span[text()=' New Auckland School '])")
+    private WebElement newauch;
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -106,6 +134,8 @@ public class DialogContent extends Parent{
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
             case "orderInput" : myElement =orderInput; break;
+            case "capacity" : myElement = capacity; break;
+            case "locType" : myElement = locType; break;
         }
         sendKeysFunction(myElement, value);
     }
@@ -115,9 +145,11 @@ public class DialogContent extends Parent{
         {
             case "loginButton" : myElement =loginButton; break;
             case "addButton" : myElement =addButton; break;
+            case "addButton2" : myElement =addButton2; break;
             case "saveButton" : myElement =saveButton; break;
             case "closeDialog" : myElement =closeDialog; break;
             case "searchButton" : myElement =searchButton; break;
+            case "editButton2":myElement=editButton2;break;
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
@@ -126,7 +158,13 @@ public class DialogContent extends Parent{
             case "nextGradeOptions" : myElement =nextGradeOptions; break;
             case "editButtonOption" : myElement =editButtonOption; break;
             case "deleteButtonOption" : myElement =deleteButtonOption; break;
+            case "activeButton" : myElement = activeButton; break;
+            case "stage" : myElement =stage;break;
+            case "certificate" : myElement = certificate;break;
+            case "newauch":myElement=newauch;break;
+
         }
+
         clickFunction(myElement);
     }
     public void findAndContainsText(String strElement, String text){
@@ -148,17 +186,6 @@ public class DialogContent extends Parent{
         findAndClick("deleteButton");// silme butonua bas
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

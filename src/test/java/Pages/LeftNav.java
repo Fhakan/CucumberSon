@@ -14,6 +14,9 @@ public class LeftNav extends Parent{
     @FindBy(xpath="(//span[text()='Setup'])[1]")
     private WebElement setupOne;
 
+    @FindBy(xpath = "//span[text()='Departments']")
+    private WebElement departments;
+
     @FindBy(xpath = "//span[text()='Parameters']")
     private WebElement parameters;
 
@@ -44,11 +47,35 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
     private WebElement setupThree;
 
+    @FindBy(xpath = "(//span[text()='Education'])")
+    private WebElement Education;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[4]")
+    private WebElement Setupfour;
+
+    @FindBy(xpath = "(//span[text()='Subject Categories'])[1]")
+    private WebElement SubjectCatagories;
+
     @FindBy(xpath = "//span[text()='Position Categories']")
     private WebElement position;
 
     @FindBy(xpath = "//span[text()='Grade Levels']")
     private WebElement gradeLevel;
+
+    @FindBy (xpath = "//span[text()='Attestations']")
+    private WebElement attestations;
+
+    @FindBy (xpath = "//span[text()='School Setup']")
+    private WebElement schoolSetup;
+
+    @FindBy (xpath = "//span[text()='Locations']")
+    private WebElement locations;
+
+    @FindBy(xpath = "//span[contains(text(),'Document')]")
+    private WebElement documentTypes;
+
+    @FindBy (xpath = "//span[text()='Fields']")
+    private WebElement fields;
 
     WebElement myElement;
     public void findAndClick(String strElement){  // 2.aşama
@@ -56,6 +83,7 @@ public class LeftNav extends Parent{
         switch (strElement)
         {
             case "setupOne" : myElement =setupOne; break;
+            case "departments":myElement=departments;break;
             case "parameters" : myElement =parameters; break;
             case "countries" : myElement =countries; break;
             case "citizenShip" : myElement =citizenShip; break;
@@ -65,9 +93,17 @@ public class LeftNav extends Parent{
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "humanResources" : myElement =humanResources; break;
+            case "Education":myElement=Education;break;
+            case "Setupfour":myElement=Setupfour;break;
+            case "SubjectCatagories":myElement=SubjectCatagories;break;
             case "setupThree" : myElement =setupThree; break;
             case "position" : myElement =position; break;
             case "gradeLevel" : myElement =gradeLevel; break;
+            case "attestations" : myElement = attestations; break;
+            case "schoolSetup" : myElement = schoolSetup; break;
+            case "locations" : myElement = locations; break;
+            case "documentTypes" :myElement =documentTypes;break;
+            case "fields" : myElement =fields;break;
         }
 
         clickFunction(myElement);
